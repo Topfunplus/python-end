@@ -1,20 +1,17 @@
 import jieba
 import json
 
-
-# 本质就是hash表
-
-
 # 要排除的token 词
 excludes = ["将军", "却说"]
 
 txt = open("./三国演义.txt", "r", encoding="utf-8").read()
+
+# 分词切割
 words = jieba.lcut(txt)
 
 print("切割:", words)
 
 counts = {}
-
 
 # 哈希统计
 for word in words:
